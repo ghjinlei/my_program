@@ -6,9 +6,9 @@
 //标准c没有引用， 所以用指针
 void swap(int *a, int *b)
 {
-	*a ^= *b;
-	*b ^= *a;
-	*a ^= *b;
+	int tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
 void heap_adjust(int *a, int i, int size)
